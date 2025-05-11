@@ -3,12 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Robson Correia">
+    <meta name="description" content="Robson Correia's homepage for Assignment submition on BYU WDD 231 – Web Frontend Development I course">
 
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/getdates.js" defer=""></script>
+    <script src="scripts/getcourses.js" defer=""></script>  
 
-    <title>WDD231 - Robson Correia</title>
+    <title>WDD 231 – Web Frontend Development I - Robson Correia</title>
 </head>
 <body>
-    <h1>WDD231 - Robson Correia</h1>
+    <header>
+        <h1>WDD 231: Web Frontend Development I - <span class="highlight">Robson Correia</span></h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="/" class="active" target=_blank title="Home Page">Home</a></li>
+                <li><a href="#" target=_blank title="Chamber Project">Chamber</a></li>
+                <li><a href="https://www.linkedin.com/in/robson-correia-4903b0a2/" target=_blank title="LinkedIn">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target=_blank title="Canvas">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p25#p25" target=_blank title="Scripture">Scripture</a></li>
+                <li><a href="#" title="Final Project">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <section class="card card-large">
+                <h2>Course Work</h2>
+                <p>I am Robson Correia, I'm' 36 years old and I'm from Cabo Verde.
+                    I'm Married since 2014 and I've got 4 children. ducating my children according to the principles of the gospel is one of my main goals. 
+                    Actually I work as Coordinator of the Information Systems Office at the Civil Aviation Authority of Cabo Verde</p>
+            </section>
+            <section class="card card-small">
+                <h2>Praia, Cabo Verde</h2>
+                <figure>
+                    <img src="images/praia.webp" alt="Flag of Cabo Verde" />
+                    <figcaption>Praia by air</figcaption>
+                </figure>
+            
+            </section>
+            
+            <section class="card courses">
+                <h2>Web and Computer Programming Certificate</h2>
+                <div>
+                    <button id="all">All Courses</button>
+                    <button id="wdd">WDD Courses</button>
+                    <button id="cse">CSE Courses</button>
+                </div>
+                
+            <section id="courses-list" class="courses-list"><div class="complete">WDD 130</div></section>
+            <p id="total-credits"></p>
+        <dialog id="course-details">
+        </dialog>        
+    </main>
+    <footer>
+        <p><span id="currentYear">©2025</span> 🦈Robson Correia 🦈 Cape Verde</p>
+        <p class="highlight" id="lastModified">Last Modification: 04/30/2024 13:54:24</p>
+    </footer>
 </body>
 </html>
