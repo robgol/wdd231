@@ -139,16 +139,12 @@ function displayCourses(filteredcourses) {
   
     });
 
-    // USE REDUCE TO FIND THE TOTAL NUMBER OF CREDITS
-    // https://www.freecodecamp.org/news/how-to-use-javascript-array-reduce-method/
+
     let totalCredits = filteredcourses.reduce((acc, course) => acc + course.credits, 0);
-    //console.log(totalCredits)
     document.querySelector('#total-credits').innerHTML = `The total number of credit for the listed courses above is ${totalCredits}`
 
   }
   
-
-  // auto display all the courses when the page opens
   displayCourses(courses)
 
 
