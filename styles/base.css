@@ -37,7 +37,7 @@ margin: 0 0 ;
 	align-items: center;
 }
 .navigation li {
-	flex: 1 1 auto; /* What is the difference between auto and 100% flex-basis? - turn on link borders to view */
+	flex: 1 1 auto; 
 }
 
 .navigation a {
@@ -199,8 +199,6 @@ footer {
     cursor: pointer;
 }
 
-/************************** DISPLAY COURSES **************************/
-/*https://www.toptal.com/designers/htmlarrows/symbols/check-mark */
 .needed {
     background-color: #fc734d;
 }
@@ -218,9 +216,6 @@ footer {
 }
 
 
-
-
-/************************** MODAL DIALOG STYLING **************************/
 dialog {
     color: #323232;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -254,4 +249,3 @@ dialog[open] {
 	left: 50%;
 	transform: translate(-50%, -50%);
   }
-
