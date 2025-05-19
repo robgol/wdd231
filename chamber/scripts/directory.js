@@ -37,7 +37,7 @@ function displayMembers(members) {
   members.forEach(member => {
     const section = document.createElement('section');
     section.innerHTML = `
-      <img src="images/logo.jpg" alt="${member.name} logo" width="100" />
+      <img src="images/logo.JPG" alt="${member.name} logo" width="100" />
       <h3>${member.name}</h3>
       <p><strong>Address:</strong> ${member.address}</p>
       <p>${member.phone}</p>
