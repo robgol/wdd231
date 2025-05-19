@@ -1,0 +1,275 @@
+:root{
+    --snow: #FFFBFFff;
+    --main: #0045A4ff;
+    --main-transparency: rgba(255, 255, 255, 0.09);
+    --secondary: #3EBDF9ff;
+    --secondary-transparency: rgba(62, 190, 249, 0.238);
+    --orange: #FF9400ff;
+    --green: #38C52Eff;
+
+}
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Lato, Helvetica, Arial, sans-serif; 
+    row-gap: 10px;   
+}
+
+main{
+    
+}
+header, footer{
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.logo{
+    min-width: 250px;
+    height: 60px;
+    display: flex;
+}
+
+.logoDescription{
+    display: grid;
+    justify-content:center;
+}
+
+#headerSiteName{
+    font-size: 2em;
+    font-weight: lighter;
+    margin: 0;
+    color: var(--snow);
+}
+
+#headerSiteDescription{
+    font-size: .8em;
+    margin: 0;
+    color: var(--snow);;
+}
+.logo img{
+    height: 60px;
+    padding-right: 5px;
+    border-radius: 10px;
+}
+
+nav {
+    width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul{
+    list-style: none;
+	flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--snow);;
+    text-decoration: none;
+
+    
+}
+
+.menu-links {
+    display: none;
+    align-items:end;
+    justify-content: end;
+    width: 100%;
+    padding: 0px;
+}
+
+.menu-links li {
+    height: 100%; /* Make li fill the height of the grid cell */
+
+}
+.menu-links li a {
+    display: inline-block;
+    height: 100%; /* Make li fill the height of the grid cell */
+    width: 100%;
+    padding: 15px;
+}
+
+.open {
+    display: inline-block;
+}
+
+
+
+
+nav a:hover {
+    text-decoration: underline;
+    background-color: var(--main-transparency);
+}
+
+nav .active{
+    text-decoration: underline;
+    background-color: var(--main-transparency);
+}
+
+#darkModeButton{
+    color: #000;
+    font-size: 2.5em;
+}
+#darkModeButton:hover{
+    text-decoration: none;
+}
+nav ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+header, main, footer{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#hero {
+    height: 100px;
+}
+#heroImage{
+    max-height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.content{
+    gap: 10px
+}
+.card{
+    min-height: 150px;
+    border: 1px solid var(--main);
+    background-color: var(--secondary-transparency);
+    margin-bottom: 10px;
+
+}
+.card-header{
+    font-size: 1em;
+    color: var(--snow);
+    background-color: var(--main);
+    margin: 0px;
+}
+/*
+.card-body{
+
+}*/
+
+.businesses{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.business{
+    background-color: var(--main-transparency);
+    border-radius: 10px;
+    border: solid 1px var(--secondary);
+    
+}
+
+.business-name{
+    justify-items: center;
+    border-bottom: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    margin-top: 10px;
+    align-items: center;
+    align-content: center;
+}
+
+.business-name h3, .business-name p{
+    margin: 0px;
+}
+
+.business-name p {
+    font-size: 0.8em;
+}
+.business-details{
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+}
+.business-contacts p {
+    margin: 0px;
+}
+.business-image {
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+}
+
+footer {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+}
+footer p{
+    margin: 2px;
+    font-size: 0.8em;
+    color: rgb(203, 203, 203);
+}
+
+.social-media-icons{
+    display: flex;
+    align-items:center;
+    align-content: center;
+    gap: 20px;
+}
+
+.social-media{
+    color: rgb(203, 203, 203);
+    text-decoration: none;
+    font-size: 3em;
+}
+
+.hide-on-small {
+    display: none;
+}
+
+.hide-on-large {
+    display: block;
+}
+
+
+
+/**
+menu animated
+*/
+
+.menu-button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #000000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.responsive-button {
+position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+}

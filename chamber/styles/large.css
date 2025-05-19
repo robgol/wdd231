@@ -1,0 +1,102 @@
+@media only screen and (min-width: 52em) {
+
+    header, footer{
+        background-color: var(--main);
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    #hero {
+        height: 300px;
+    }
+
+    header, main, footer {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+
+    .content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 10px
+    }
+
+    #heroImage{
+        max-height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    footer{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .businesses{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .hide-on-small {
+        display: block;
+    }
+
+    .hide-on-large {
+        display: none;
+    }
+
+    #darkModeButton {
+        color: #000;
+        font-size: 1.5em;
+    }
+
+    .menu-links {
+        display: flex;
+        align-items:end;
+        justify-content: end;
+    }
+
+    .menu-links li {
+        padding: 0;
+        height: 100%; /* Make li fill the height of the grid cell */
+
+    }
+    .menu-links li a {
+        height: 100%; /* Make li fill the height of the grid cell */
+        width: 100%;
+        padding: 15px;
+        display: inline;
+    }
+/*    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    nav ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    ul.menu-links {
+    display:contents;
+    padding-left: 0px;
+    width: 100%;
+
+    }
+
+    .menu-links li a {
+        padding-left: 0px;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: .75rem 2vw;
+    }
+        */
+
+}
