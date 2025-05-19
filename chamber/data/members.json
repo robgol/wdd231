@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Island Breeze Café",
+    "address": "123 Seaside Blvd, Praia, Cabo Verde",
+    "phone": "+238 261 0001",
+    "website": "http://www.islandbreezecafe.cv",
+    "image": "island_breeze_logo.png",
+    "membershipLevel": 3,
+    "description": "A beachfront café offering local Cape Verdean cuisine with a modern twist.",
+    "category": "Restaurant"
+  },
+  {
+    "name": "Blue Horizon Tech",
+    "address": "45 Innovation Park, Mindelo, Cabo Verde",
+    "phone": "+238 231 4455",
+    "website": "https://www.bluehorizontech.cv",
+    "image": "blue_horizon_logo.png",
+    "membershipLevel": 2,
+    "description": "Technology solutions provider specializing in cloud systems and IT consulting.",
+    "category": "Technology"
+  },
+  {
+    "name": "EcoTravel Tours",
+    "address": "7 Rua das Palmeiras, Sal Rei, Cabo Verde",
+    "phone": "+238 992 5566",
+    "website": "http://www.ecotraveltours.cv",
+    "image": "ecotravel_icon.png",
+    "membershipLevel": 1,
+    "description": "Guided eco-friendly tours across Cape Verde islands for individuals and groups.",
+    "category": "Tourism"
+  },
+  {
+    "name": "Praia Fitness Club",
+    "address": "88 Av. Liberdade, Praia, Cabo Verde",
+    "phone": "+238 343 7788",
+    "website": "http://www.praiafitness.cv",
+    "image": "praia_fitness_logo.jpg",
+    "membershipLevel": 2,
+    "description": "A full-service gym and wellness center offering classes, training, and nutrition plans.",
+    "category": "Health & Fitness"
+  },
+  {
+    "name": "Atlantic Legal Partners",
+    "address": "12 Legal Ave, São Filipe, Cabo Verde",
+    "phone": "+238 211 3344",
+    "website": "https://www.atlanticlegal.cv",
+    "image": "atlantic_legal_icon.png",
+    "membershipLevel": 3,
+    "description": "Legal advisory firm serving businesses and individuals with integrity and expertise.",
+    "category": "Legal Services"
+  },
+  {
+    "name": "VerdeMart Superstore",
+    "address": "55 Market Street, Espargos, Cabo Verde",
+    "phone": "+238 301 9988",
+    "website": "http://www.verdemart.cv",
+    "image": "verdemart_logo.png",
+    "membershipLevel": 1,
+    "description": "A locally-owned supermarket offering fresh produce, groceries, and household items.",
+    "category": "Retail"
+  },
+  {
+    "name": "Cape Verde Builders Ltd.",
+    "address": "109 Industrial Zone, Assomada, Cabo Verde",
+    "phone": "+238 555 1122",
+    "website": "https://www.cvbuilders.cv",
+    "image": "cv_builders_icon.svg",
+    "membershipLevel": 2,
+    "description": "Construction and infrastructure development company with over 20 years of experience.",
+    "category": "Construction"
+  }
+]

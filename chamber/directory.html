@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Robson Correia">
+    <meta name="description" content="Robson Correia's Chamber Project on BYU WDD 231 – Web Frontend Development I course">
+
+    <meta property="og:title" content="Chamber Of COmmerce - WDD 231: Web Frontend Development I - Robson Correia">
+    <meta property="og:description" content="Robson Correia's Chamber Project on BYU WDD 231 – Web Frontend Development I course">
+    <meta property="og:url" content="https://robgol.github.io/wdd231/">
+    <meta property="og:image" content="https://robgol.github.io/wdd231/images/robson-whater-fall.webp" />
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/directory.css">
+    <link rel="icon" href="images/favicon.ico">
+
+
+    <script src="scripts/getdates.js" defer=""></script>
+
+    <title>Cidade da Praia - Chamber of Comerce</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div>
+                <img src="images/logo2.JPG" alt="">
+            </div>
+            <div class="logoDescription">
+                <span id="headerSiteName">Praia</span>
+                <span id="headerSiteDescription">Chamber Of Commerce</span>                
+            </div>
+        </div>
+        <nav>
+            <ul class="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" class="active">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+            <div class="responsive-button" id="responsive-button">
+                <a id="darkModeButton" href="javascript:void(0);" class="fa fa-adjust ga-tryit"></a>
+                <div class="menu-button hide-on-large">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+
+        <h2>Directory</h2>
+        <div class="menu">
+            <button id="grid">⏹️ Grid</button>
+            <button id="list">📄 List</button>
+        </div>
+
+
+    <article class="grid" id="directory">
+        <!-- Members will be injected here -->
+    </article>
+
+
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="contact">
+            <p><span class="siteName"><strong>Praia - Chamber of Commerce</strong></span></p>
+            <p><span>Avenida Amílcar Cabral #25</span></p> 
+            <p><span>7600, Cidade da Praia</span></p>
+            <p><span>comercio@comercio.praia</span></p> 
+            <p><span>+238 123 456 189</span></p> 
+        </div>
+        <div class="social-media-icons">
+            <a href="#" class="social-media fa fa-youtube"></a>
+            <a href="#" class="social-media fa fa-twitter"></a>
+            <a href="#" class="social-media fa fa-linkedin"></a>            
+        </div>
+        <div class="control">
+            <p><span>WDD231 Class Project</span></p>
+            <p><span>Robson Correia</span></p>
+            <p><span id="currentYear"></span> Praia Chamber of Commerce</p>
+            <p class="highlight" id="lastModified"></p>
+        </div>
+
+    </footer>
+    <script src="scripts/responsive-menu.js" defer=""></script>
+    <script src="scripts/directory.js" defer=""></script>
+
+</body>
+</html>

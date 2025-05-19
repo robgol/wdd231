@@ -1,0 +1,156 @@
+:root{
+    --snow: #FFFBFFff;
+    --main: #0045A4ff;
+    --main-transparency: rgba(255, 255, 255, 0.09);
+    --secondary: #3EBDF9ff;
+    --secondary-transparency: rgba(62, 190, 249, 0.238);
+    --orange: #FF9400ff;
+    --green: #38C52Eff;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	background-color: #333;
+	color: #eee;
+	padding: 1rem;
+	text-align: center;
+}
+
+
+
+.menu {
+	margin: 1rem auto;
+	border: 1px solid rgb(0 0 0 / 0.1);
+	padding: 0.5rem;
+	background-color: var(--secondary);
+	text-align: center;
+}
+
+.menu button {
+	padding: 1rem;
+	font-weight: 700;
+}
+
+section {
+	border: 1px solid rgb(0 0 0 / 0.1);
+	padding: 0.5rem;
+	background-color: #ddd;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 5px;
+	align-items: center;
+}
+
+.grid section {
+	text-align: center;
+}
+
+.grid img {
+	border: 1px solid #fff;
+	box-shadow: 0 0 1rem #555;
+}
+
+.grid section > * {
+	margin: 0.1rem;
+}
+
+.grid h3 {
+	font-size: 1.2rem;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.list section {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	margin: 0;
+	padding: 0.25rem;
+}
+
+.list section > * {
+	margin: 0 1rem;
+}
+
+.list section img {
+	display: none; /* smaller viewports only */
+}
+
+.list section h3 {
+	font-size: 1rem;
+}
+
+.list section:nth-child(even) {
+	background-color: #bbb;
+}
+
+section h3 {
+	font-size: 1.5rem;
+}
+
+section a {
+	font-family: Arial, sans-serif;
+	font-size: 0.85rem;
+	color: navy;
+}
+
+img {
+	width: auto;
+	height: 75px;
+}
+
+#directory section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Member Name */
+#directory h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0077cc;
+}
+
+/* Text and Links */
+#directory p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+#directory a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+#directory a:hover {
+  text-decoration: underline;
+}
+
+/* Member Image */
+#directory img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Member Card Styling */
+#directory section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
