@@ -42,7 +42,6 @@ function displayMembers(members) {
       <p><strong>Address:</strong> ${member.address}</p>
       <p>${member.phone}</p>
       <p><a href="${member.website}" target="_blank">${member.website}</a></p>
-      <p><strong>Category:</strong> ${member.category}</p>
     `;
     container.appendChild(section);
   });

@@ -20,7 +20,6 @@ html, body {
 }
 
 main {
-    max-width: 60em;
     margin: 0 auto; /* centers the main element horizontally */
     padding: 0 10px;
 }
