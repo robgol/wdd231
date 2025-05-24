@@ -42,11 +42,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    .businesses{
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
+    .businesses {
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+        gap: 20px; /* Space between items */
+        margin: 0 auto; /* Center-align content */
+        box-sizing: border-box; /* Ensure padding fits within width */
+    }
+        .business {
+        width: 100%; 
+        max-width: 100%;
+        word-wrap: break-word; 
     }
     .hide-on-small {
         display: block;

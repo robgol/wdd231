@@ -160,17 +160,21 @@ header, main, footer{
 
 }*/
 
-.businesses{
-    margin-top: 20px;
+.businesses {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px; 
+    padding: 10px; 
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .business{
     background-color: var(--main-transparency);
     border-radius: 10px;
     border: solid 1px var(--secondary);
+    max-width: 100%;
     
 }
 
