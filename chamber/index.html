@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="author" content="Robson Correia">
+    <meta name="description" content="Robson Correia's Chamber Project on BYU WDD 231 – Web Frontend Development I course">
+
+    <meta property="og:title" content="Chamber Of Commerce - WDD 231: Web Frontend Development I - Robson Correia">
+    <meta property="og:description" content="Robson Correia's Chamber Project on BYU WDD 231 – Web Frontend Development I course">
+    <meta property="og:url" content="https://robgol.github.io/wdd231/">
+    <meta property="og:image" content="https://robgol.github.io/wdd231/chamber/images/logo2.jpg" />
+
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/weather.css">
     <link rel="icon" href="images/favicon.ico">
-
-    <script src="scripts/getdates.js" defer></script>
 
     <title>Cidade da Praia - Chamber of Comerce</title>
 </head>
@@ -21,7 +31,7 @@
             </div>
             <div class="logoDescription">
                 <span id="headerSiteName">Praia</span>
-                <span id="headerSiteDescription">Chamber Of Commerce</span>                
+                <span id="headerSiteDescription">Chamber Of Commerce</span>
             </div>
         </div>
         <nav>
@@ -68,53 +78,7 @@
                 </div>
             </section>
         </div>
-        <div class="businesses">
-            <section class="business">
-                <div class="business-name">
-                    <h3>Business Name</h3>
-                    <p><span>Business Tag Line</span></p>                    
-                </div>
-
-                <div class="business-details">
-                    <img class="business-image" src="images/logo.jpg" alt="Business Logo"/>
-                    <div class="business-contacts">
-                        <p><span><strong>Email:</strong> business@mail.com</span></p>
-                        <p><span><strong>Phone:</strong> 123 456 789</span></p>
-                        <p><span><strong>URL:</strong> <a href="https://business.com" target="_blank">https://business.com</a></span></p>
-                    </div>
-                </div>
-            </section>
-            <section class="business">
-                <div class="business-name">
-                    <h3>Business Name</h3>
-                    <p><span>Business Tag Line</span></p>                    
-                </div>
-
-                <div class="business-details">
-                    <img class="business-image" src="images/logo.jpg" alt="Business Logo"/>
-                    <div class="business-contacts">
-                        <p><span><strong>Email:</strong> business@mail.com</span></p>
-                        <p><span><strong>Phone:</strong> 123 456 789</span></p>
-                        <p><span><strong>URL:</strong> <a href="https://business.com" target="_blank">https://business.com</a></span></p>
-                    </div>
-                </div>
-            </section>
-            <section class="business hide-on-small">
-                <div class="business-name">
-                    <h3>Business Name</h3>
-                    <p><span>Business Tag Line</span></p>                    
-                </div>
-
-                <div class="business-details">
-                    <img class="business-image" src="images/logo.jpg" alt="Business Logo"/>
-                    <div class="business-contacts">
-                        <p><span><strong>Email:</strong> business@mail.com</span></p>
-                        <p><span><strong>Phone:</strong> 123 456 789</span></p>
-                        <p><span><strong>URL:</strong> <a href="https://business.com" target="_blank">https://business.com</a></span></p>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <div class="businesses"></div>
     </main>
     <footer>
         <div class="contact">
@@ -138,5 +102,9 @@
 
     </footer>
     <script src="scripts/responsive-menu.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/spotlight.js"></script>
+
+
 </body>
 </html>

@@ -3,7 +3,7 @@
     --main: #0045A4ff;
     --main-transparency: rgba(255, 255, 255, 0.09);
     --secondary: #3EBDF9ff;
-    --secondary-transparency: rgba(62, 190, 249, 0.238);
+    --secondary-transparency: rgba(89, 193, 241, 0.589);
     --orange: #FF9400ff;
     --green: #38C52Eff;
 
@@ -149,6 +149,7 @@ header, main, footer{
 
 }
 .card-header{
+    padding: 10px;
     font-size: 1em;
     color: var(--snow);
     background-color: var(--main);
