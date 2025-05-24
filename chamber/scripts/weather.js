@@ -48,7 +48,6 @@ fetch(forecastWeatherUrl)
 
             const dayTemp = `${Math.round(day.main.temp)}°C`;
 
-            // Append forecast block
             forecastContainer.innerHTML += `
                 <div class="forecast-day">
                     <p>${dayName}: <b>${dayTemp}</b></p>
