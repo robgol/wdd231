@@ -17,11 +17,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/join.css">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="stylesheet" href="styles/weather.css">
     <link rel="icon" href="images/favicon.ico">
 
     <script src="scripts/getdates.js" defer=""></script>
+    <script src="scripts/join.js" defer=""></script>
 
     <title>Cidade da Praia - Chamber of Comerce - Home</title>
 </head>
@@ -38,9 +40,9 @@
         </div>
         <nav>
             <ul class="menu-links">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
                 <li><a href="#">Discover</a></li>
             </ul>
             <div class="responsive-button" id="responsive-button">
@@ -55,45 +57,34 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
-            <img id="heroImage" src="images/praia.jpg" alt="Praia">
+        <section id="thankyou-message">
+            <h1>Thank You for Joining Us!</h1>
+            <p>We have received your submitted information successfully. Below is a summary of the data you provided:</p>
 
-        </div>
-        <h1>Home</h1>
-        <div class="content">
-            <section class="card">
-                <h3 class="card-header">Events</h3>
-                <div class="card-body">
-
-                </div>
-            </section>
-            <section class="card">
-                <h3 class="card-header">Current Weather</h3>
-                <div class="card-body">
-
-                </div>
-            </section>
-            <section class="card">
-                <h3 class="card-header">Weather Forescast</h3>
-                <div class="card-body">
-
-                </div>
-            </section>
-        </div>
-        <div class="businesses"></div>
+            <div id="formData">
+                <!-- Form data will appear dynamically -->
+                <p><strong>Name:</strong> <span id="firstName"></span> <span id="lastName"></span></p>
+                <p><strong>Email:</strong> <span id="email"></span></p>
+                <p><strong>Mobile Number:</strong> <span id="mobile"></span></p>
+                <p><strong>Organization Name:</strong> <span id="organization"></span></p>
+                <p><strong>Selected Membership:</strong> <span id="membershipLevel"></span></p>
+                <p><strong>Submission Timestamp:</strong> <span id="timestamp"></span></p>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="contact">
             <p><span class="siteName"><strong>Praia - Chamber of Commerce</strong></span></p>
-            <p><span>Avenida Amílcar Cabral #25</span></p> 
+            <p><span>Avenida Amílcar Cabral #25</span></p>
             <p><span>7600, Cidade da Praia</span></p>
-            <p><span>comercio@comercio.praia</span></p> 
-            <p><span>+238 123 456 189</span></p> 
+            <p><span>comercio@comercio.praia</span></p>
+            <p><span>+238 123 456 189</span></p>
         </div>
         <div class="social-media-icons">
             <a href="#" class="social-media fa fa-youtube"></a>
             <a href="#" class="social-media fa fa-twitter"></a>
-            <a href="#" class="social-media fa fa-linkedin"></a>            
+            <a href="#" class="social-media fa fa-linkedin"></a>
         </div>
         <div class="control">
             <p><span>WDD231 Class Project</span></p>
@@ -101,12 +92,20 @@
             <p><span id="currentYear"></span> Praia Chamber of Commerce</p>
             <p class="highlight" id="lastModified"></p>
         </div>
-
     </footer>
-    <script src="scripts/responsive-menu.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlight.js"></script>
 
+    <script>
+        // Retrieve data from the URL query string
+        const params = new URLSearchParams(window.location.search);
 
+        // Map parameters to elements
+        document.getElementById('firstName').textContent = params.get('firstName') || "Not Provided";
+        document.getElementById('lastName').textContent = params.get('lastName') || "Not Provided";
+        document.getElementById('email').textContent = params.get('email') || "Not Provided";
+        document.getElementById('mobile').textContent = params.get('mobile') || "Not Provided";
+        document.getElementById('organization').textContent = params.get('organization') || "Not Provided";
+        document.getElementById('membershipLevel').textContent = params.get('membershipLevel') || "Not Provided";
+        document.getElementById('timestamp').textContent = params.get('timestamp') || "Not Provided";
+    </script>
 </body>
 </html>
