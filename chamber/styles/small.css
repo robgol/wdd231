@@ -308,7 +308,7 @@ position: absolute;
 
 .card img {
     width: 100%;
-    max-width: 300px; /* Resize if necessary */
+    max-width: 300px; 
     height: auto;
     border-radius: 10px;
 }
@@ -358,12 +358,11 @@ position: absolute;
 }
 
 .businesses-discover img {
-    width: 300px; /* Fixed width */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensures the image is cropped to fit the area */
+    width: 300px;
+    object-fit: cover;
     border-radius: 10px;
-    display: block; /* Removes spacing issues */
-    margin: 0 auto; /* Centers the images inside the container */
+    display: block; 
+    margin: 0 auto; 
 }
 
 .visit-message {
@@ -373,7 +372,7 @@ position: absolute;
     margin-top: 10px;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: var(--main-transparency); /* Semi-transparent background */
+    background-color: var(--main-transparency); 
     border: 1px solid var(--main);
     border-radius: 5px;
     color: var(--main);
