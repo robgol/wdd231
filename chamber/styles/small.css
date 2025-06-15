@@ -334,7 +334,6 @@ position: absolute;
     background-color: var(--main);
     text-decoration: none;
     border-radius: 5px;
-    transitions: all 0.3s ease;
 }
 
 .website-link:hover {
