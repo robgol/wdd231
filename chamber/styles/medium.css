@@ -1,0 +1,33 @@
+
+@media only screen and (min-width: 641px) and (max-width: 1023px) {
+    .businesses-discover {
+        display: grid;
+        gap: 30px; /* Space between cards */
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8"
+            "card9"; /* Two cards per row */
+        padding: 40px; /* Adjust padding for medium screens */
+        grid-auto-rows: minmax(200px, auto); /* Maintain consistent row heights */
+    }
+
+    .business-card:nth-child(1) { grid-area: card1; }
+    .business-card:nth-child(2) { grid-area: card2; }
+    .business-card:nth-child(3) { grid-area: card3; }
+    .business-card:nth-child(4) { grid-area: card4; }
+    .business-card:nth-child(5) { grid-area: card5; }
+    .business-card:nth-child(6) { grid-area: card6; }
+    .business-card:nth-child(7) { grid-area: card7; }
+    .business-card:nth-child(8) { grid-area: card8; }
+    .business-card:nth-child(9) { grid-area: card9; }
+
+    .businesses-discover img {
+        width: 100%; /* Image adjusts to the grid area */
+        height: auto; /* Keeps aspect ratio */
+        object-fit: cover; /* Cropped to fit grid space */
+        aspect-ratio: 4 / 3; /* Ensures consistent aspect ratio */
+        border-radius: 8px; /* Softer corners for medium screens */
+    }
+}

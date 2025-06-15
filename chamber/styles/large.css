@@ -1,4 +1,4 @@
-@media only screen and (min-width: 52em) {
+@media only screen and (min-width: 1024px) {
 
     header, footer{
         background-color: var(--main);
@@ -77,13 +77,42 @@
 
     .menu-links li {
         padding: 0;
-        height: 100%; /* Make li fill the height of the grid cell */
+        height: 100%;
 
     }
     .menu-links li a {
-        height: 100%; /* Make li fill the height of the grid cell */
+        height: 100%; 
         width: 100%;
         padding: 15px;
         display: inline;
     }
+
+.businesses-discover {
+    display: grid;
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card5 card6"
+        "card7 card8 card9"; /* Three cards per row */
+    gap: 40px; /* Space between cards */
+    padding: 50px;
+    grid-auto-rows: minmax(200px, auto); /* Maintains consistent row heights */
+}
+
+.business-card:nth-child(1) { grid-area: card1; }
+.business-card:nth-child(2) { grid-area: card2; }
+.business-card:nth-child(3) { grid-area: card3; }
+.business-card:nth-child(4) { grid-area: card4; }
+.business-card:nth-child(5) { grid-area: card5; }
+.business-card:nth-child(6) { grid-area: card6; }
+.business-card:nth-child(7) { grid-area: card7; }
+.business-card:nth-child(8) { grid-area: card8; }
+.business-card:nth-child(9) { grid-area: card9; }
+
+.businesses-discover img {
+    width: 100%; /* Takes the full width of the grid area */
+    height: auto; /* Respects the aspect ratio */
+    object-fit: cover; /* Ensures images fill their container while preserving aspect */
+    aspect-ratio: 4 / 3; /* Maintains a consistent 4:3 ratio */
+    border-radius: 10px; /* Optional - for rounded corners */
+}
 }

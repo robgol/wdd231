@@ -1,0 +1,23 @@
+.businesses-discover {
+    display: grid;
+    gap: 20px; /* Space between cards */
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8"; /* Each card is stacked vertically */
+    padding: 20px;
+}
+
+.business-card:nth-child(1) { grid-area: card1; }
+.business-card:nth-child(2) { grid-area: card2; }
+.business-card:nth-child(3) { grid-area: card3; }
+.business-card:nth-child(4) { grid-area: card4; }
+.business-card:nth-child(5) { grid-area: card5; }
+.business-card:nth-child(6) { grid-area: card6; }
+.business-card:nth-child(7) { grid-area: card7; }
+.business-card:nth-child(8) { grid-area: card8; }

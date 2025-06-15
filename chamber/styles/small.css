@@ -288,3 +288,117 @@ position: absolute;
 .dark-mode footer {
     background-color: #222;
 }
+
+.card {
+    border: 2px solid var(--main);
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--secondary-transparency);
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card figure {
+    margin: 15px 0;
+}
+
+.card img {
+    width: 100%;
+    max-width: 300px; /* Resize if necessary */
+    height: auto;
+    border-radius: 10px;
+}
+
+.card address {
+    font-style: normal;
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: darkslategray;
+}
+
+.card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.website-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    color: white;
+    background-color: var(--main);
+    text-decoration: none;
+    border-radius: 5px;
+    transitions: all 0.3s ease;
+}
+
+.website-link:hover {
+    background-color: var(--orange);
+}
+
+.businesses-discover {
+    display: grid;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7";
+    gap: 20px; 
+    padding: 10px; 
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.businesses-discover img {
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image is cropped to fit the area */
+    border-radius: 10px;
+    display: block; /* Removes spacing issues */
+    margin: 0 auto; /* Centers the images inside the container */
+}
+
+.visit-message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--main-transparency); /* Semi-transparent background */
+    border: 1px solid var(--main);
+    border-radius: 5px;
+    color: var(--main);
+    font-size: 1em;
+    font-style: italic;
+    text-align: left;
+    position: relative;
+}
+
+.visit-message span {
+    flex-grow: 1;
+}
+
+.close-button {
+    border: none;
+    background: none;
+    color: var(--main);
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.close-button:hover {
+    color: var(--orange);
+}

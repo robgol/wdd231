@@ -17,8 +17,9 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/discover-small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
-    <link rel="stylesheet" href="styles/weather.css">
     <link rel="icon" href="images/favicon.ico">
 
     <script src="scripts/getdates.js" defer=""></script>
@@ -38,10 +39,10 @@
         </div>
         <nav>
             <ul class="menu-links">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#" class="active">Discover</a></li>
             </ul>
             <div class="responsive-button" id="responsive-button">
                 <a id="darkModeButton" href="javascript:void(0);" class="fa fa-adjust ga-tryit"></a>
@@ -55,32 +56,12 @@
         </nav>
     </header>
     <main>
-        <div class="hero">
-            <img id="heroImage" src="images/praia.jpg" alt="Praia">
 
-        </div>
-        <h1>Home</h1>
-        <div class="content">
-            <section class="card">
-                <h3 class="card-header">Events</h3>
-                <div class="card-body">
+        <h1>Discover</h1>
+        
+        <div class="businesses-discover"></div>
 
-                </div>
-            </section>
-            <section class="card">
-                <h3 class="card-header">Current Weather</h3>
-                <div class="card-body">
 
-                </div>
-            </section>
-            <section class="card">
-                <h3 class="card-header">Weather Forescast</h3>
-                <div class="card-body">
-
-                </div>
-            </section>
-        </div>
-        <div class="businesses"></div>
     </main>
     <footer>
         <div class="contact">
@@ -104,8 +85,8 @@
 
     </footer>
     <script src="scripts/responsive-menu.js"></script>
-    <script src="scripts/weather.js"></script>
-    <script src="scripts/spotlight.js"></script>
+    <script src="scripts/populateDiscover.js"></script>
+
 
 
 </body>
