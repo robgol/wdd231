@@ -1,0 +1,132 @@
+{
+  "properties": [
+    {
+      "id": "property1",
+      "tipology": "House",
+      "location": "Praia, Cape Verde",
+      "price": 320000,
+      "area": 2200,
+      "images": [
+        "images/properties/01/01.jpg",
+        "images/properties/01/02.jpg",
+        "images/properties/01/03.jpg",
+        "images/properties/01/04.jpg",
+        "images/properties/01/05.jpg",
+        "images/properties/01/06.jpg"
+      ],
+      "hot_deal": true
+    },
+    {
+      "id": "property2",
+      "tipology": "Apartment",
+      "location": "Mindelo, Cape Verde",
+      "price": 450000,
+      "area": 1500,
+      "images": [
+        "images/properties/02/01.jpg",
+        "images/properties/02/02.jpg",
+        "images/properties/02/03.jpg",
+        "images/properties/02/04.jpg",
+        "images/properties/02/05.jpg",
+        "images/properties/02/06.jpg"
+      ],
+      "hot_deal": true
+    },
+    {
+      "id": "property3",
+      "tipology": "Condo",
+      "location": "Santa Maria, Cape Verde",
+      "price": 280000,
+      "area": 1000,
+      "images": [
+        "images/properties/03/01.jpg",
+        "images/properties/03/02.jpg",
+        "images/properties/03/03.jpg",
+        "images/properties/03/04.jpg",
+        "images/properties/03/05.jpg",
+        "images/properties/03/06.jpg"
+      ],
+      "hot_deal": true
+    },
+    {
+      "id": "property4",
+      "tipology": "Townhouse",
+      "location": "Assomada, Cape Verde",
+      "price": 390000,
+      "area": 1800,
+      "images": [
+        "images/properties/04/01.jpg",
+        "images/properties/04/02.jpg",
+        "images/properties/04/03.jpg",
+        "images/properties/04/04.jpg",
+        "images/properties/04/05.jpg",
+        "images/properties/04/06.jpg"
+      ],
+      "hot_deal": true
+    },
+    {
+      "id": "property5",
+      "tipology": "House",
+      "location": "Sal Rei, Cape Verde",
+      "price": 550000,
+      "area": 2500,
+      "images": [
+        "images/properties/05/01.jpg",
+        "images/properties/05/02.jpg",
+        "images/properties/05/03.jpg",
+        "images/properties/05/04.jpg",
+        "images/properties/05/05.jpg",
+        "images/properties/05/06.jpg"
+      ],
+      "hot_deal": false
+    },
+    {
+      "id": "property6",
+      "tipology": "Apartment",
+      "location": "Porto Novo, Cape Verde",
+      "price": 310000,
+      "area": 1300,
+      "images": [
+        "images/properties/06/01.jpg",
+        "images/properties/06/02.jpg",
+        "images/properties/06/03.jpg",
+        "images/properties/06/04.jpg",
+        "images/properties/06/05.jpg",
+        "images/properties/06/06.jpg"
+      ],
+      "hot_deal": false
+    },
+    {
+      "id": "property7",
+      "tipology": "Condo",
+      "location": "Tarrafal, Cape Verde",
+      "price": 260000,
+      "area": 950,
+      "images": [
+        "images/properties/07/01.jpg",
+        "images/properties/07/02.jpg",
+        "images/properties/07/03.jpg",
+        "images/properties/07/04.jpg",
+        "images/properties/07/05.jpg",
+        "images/properties/07/06.jpg"
+      ],
+      "hot_deal": false
+    },
+    {
+      "id": "property8",
+      "tipology": "House",
+      "location": "Calheta, Cape Verde",
+      "price": 480000,
+      "area": 2000,
+      "images": [
+        "images/properties/08/01.jpg",
+        "images/properties/08/02.jpg",
+        "images/properties/08/03.jpg",
+        "images/properties/08/04.jpg",
+        "images/properties/08/05.jpg",
+        "images/properties/08/06.jpg"
+      ],
+      "hot_deal": false
+    }
+  ]
+}

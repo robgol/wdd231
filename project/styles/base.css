@@ -1,0 +1,365 @@
+/* base.css */
+
+:root {
+    /* Primary Colors */
+    --primary-dark: #333;       /* Used for header, footer background, main headings, dark text */
+    --primary-medium: #555;     /* Used for buttons, feature icons */
+    --primary-light: #eee;      /* Used for section backgrounds like highlight property, hot deals, get in touch */
+
+    /* Text Colors */
+    --text-dark: #333;          /* Very dark text, for main headings */
+    --text-medium: #666;        /* Medium dark text, for section descriptions, general paragraph text */
+    --text-light: #777;         /* Slightly lighter text, for feature item paragraphs */
+    --text-white: #fff;         /* White text, for header/footer links and buttons */
+    --text-placeholder: #ccc;   /* Placeholder text/background */
+
+    /* Border & Background Colors */
+    --border-light: #ddd;       /* Light border for cards/features */
+    --background-white: #fff;   /* Pure white background for sections like Main Benefits, Testimonials */
+    --background-off-white: #f8f8f8; /* Very light off-white for body background */
+    --background-light-grey: #fdfdfd; /* Slightly off-white for card backgrounds */
+    --background-placeholder: #ccc; /* Placeholder image background */
+}
+
+
+/* General Styling - Using Variables */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-dark);
+    background-color: var(--background-off-white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+p.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+    color: var(--text-medium);
+}
+
+.button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 12px 25px;
+    background-color: var(--primary-medium);
+    color: var(--text-white);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #777;
+}
+
+/* Header - Using Variables */
+header {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    padding: 15px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* desktop default: display flex */
+    display: flex; /* This will be overridden for small screens */
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none; /* Initially hidden for desktop */
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-white);
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active .fa-bars:before {
+    content: "\f00d";
+}
+
+.hamburger.active .fa-bars {
+    transform: rotate(90deg);
+}
+
+
+/* Highlight Property Section - Using Variables */
+.highlight-property {
+    background-color: var(--primary-light);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.highlight-property h1 {
+    font-size: 48px; /* Default desktop size */
+    margin-bottom: 30px;
+}
+
+.highlight-property .image-placeholder {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    background-color: var(--background-placeholder);
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.highlight-property .image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight-property p {
+    font-size: 18px;
+    color: var(--text-medium);
+    margin-bottom: 30px;
+}
+
+/* Main Benefits Section - Using Variables */
+.main-benefits {
+    padding: 60px 0;
+    background-color: var(--background-white);
+}
+
+.main-benefits h2 {
+    font-size: 36px;
+}
+
+.main-benefits .features {
+    display: flex; /* Default desktop flex */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.main-benefits .feature-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background-color: var(--background-light-grey);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.feature-item .feature-icon {
+    font-size: 40px;
+    color: var(--primary-medium);
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.feature-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-light);
+    text-align: left;
+}
+
+/* Hot Deals Section - Using Variables */
+.hot-deals {
+    padding: 60px 0;
+    background-color: var(--primary-light);
+}
+
+.hot-deals h2 {
+    font-size: 36px;
+}
+
+.hot-deals .deal-gallery {
+    display: flex; /* Default desktop flex */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hot-deals .deal-item {
+    width: 250px; /* Default desktop size */
+    height: 180px; /* Default desktop size */
+    background-color: var(--background-placeholder);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hot-deals .deal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Testimonials Section - Using Variables */
+.testimonials {
+    padding: 60px 0;
+    background-color: var(--background-white);
+}
+
+.testimonials h2 {
+    font-size: 36px;
+}
+
+.testimonials .testimonial-grid {
+    display: flex; /* Default desktop flex */
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.testimonials .testimonial-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: var(--background-light-grey);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-light);
+    text-align: center;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-medium);
+    margin-bottom: 15px;
+}
+
+.testimonial-item .author {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+/* Get In Touch Section - Using Variables */
+.get-in-touch {
+    padding: 60px 0;
+    background-color: var(--primary-light);
+}
+
+.get-in-touch h2 {
+    font-size: 36px;
+}
+
+.get-in-touch .contact-form {
+    display: flex; /* Default desktop flex */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.get-in-touch input[type="email"],
+.get-in-touch input[type="text"] {
+    padding: 12px;
+    border: 1px solid var(--text-placeholder);
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 250px; /* Default desktop min-width */
+}
+
+.get-in-touch .subscribe-button {
+    margin: 0;
+    flex-grow: 0;
+    min-width: 150px;
+}
+
+/* Footer - Using Variables */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .footer-nav ul {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: flex; /* Default desktop flex */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-nav ul li {
+    margin: 0 15px;
+}
+
+footer .footer-nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .address,
+footer .copyright {
+    font-size: 14px;
+    color: var(--text-placeholder);
+    margin-top: 10px;
+}

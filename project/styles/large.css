@@ -1,0 +1,143 @@
+/* styles/large.css - Desktop Overrides */
+
+@media (min-width: 769px) { /* Apply these styles for screens 769px and wider */
+
+    /* Header - Desktop Navigation */
+    header .nav-links {
+        /* --- CRITICAL CHANGE FOR DESKTOP MENU --- */
+        display: flex !important; /* Force display flex for desktop */
+        height: auto !important; /* Ensure height is auto */
+        overflow: visible !important; /* Ensure content is visible */
+        padding: 0 !important; /* Remove mobile padding */
+        opacity: 1 !important; /* Ensure visible */
+        pointer-events: auto !important; /* Enable interaction */
+        transform: none !important; /* Remove any mobile transformations */
+        /* --- END CRITICAL CHANGE --- */
+
+        flex-direction: row; /* Layout horizontally */
+        position: static; /* Remove absolute positioning */
+        width: auto; /* Reset width */
+    }
+
+    header .nav-links li {
+        margin-left: 30px; /* Restore desktop spacing */
+        margin-top: 0; /* Remove mobile margin */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on large screens */
+    }
+
+    /* Highlight Property Section */
+    .highlight-property h1 {
+        font-size: 48px; /* Desktop font size */
+    }
+
+
+    /* Main Benefits Section */
+    .main-benefits .features {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .main-benefits .feature-item {
+        max-width: 350px;
+    }
+
+    /* Hot Deals Section */
+    .hot-deals .deal-gallery {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .hot-deals .deal-item {
+        width: 250px;
+        height: 180px;
+    }
+
+    /* Testimonials Section */
+    .testimonials .testimonial-grid {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .testimonials .testimonial-item {
+        max-width: 350px;
+    }
+
+    /* Get In Touch Section */
+    .get-in-touch .contact-form {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .get-in-touch input[type="email"],
+    .get-in-touch input[type="text"] {
+        width: auto;
+        min-width: 250px;
+    }
+
+    .get-in-touch .subscribe-button {
+        width: auto;
+    }
+
+    /* Footer */
+    footer .footer-nav ul {
+        flex-direction: row;
+        gap: normal;
+    }
+     .property-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+        gap: 30px;
+    }
+
+    .property-card {
+        max-width: none; /* Remove max-width restriction on desktop */
+    }
+     .property-detail h1 {
+        font-size: 48px;
+    }
+
+    .property-images {
+        grid-template-columns: repeat(2, 1fr); /* 3 columns on desktop */
+    }
+
+    .detail-image {
+        height: 400px; /* Adjust height for desktop grid */
+    }
+    .testimonial-grid-page {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    }
+
+    .about-content {
+        flex-direction: row; /* Arrange side-by-side on desktop */
+        justify-content: space-around;
+        align-items: flex-start; /* Align items to the top */
+    }
+
+    .about-text {
+        flex: 2; /* Take more space */
+        padding-right: 30px; /* Space between text and image */
+    }
+
+    .about-text h3 {
+        text-align: left; /* Left align heading for desktop */
+    }
+
+    .about-image {
+        flex: 1; /* Take less space */
+        text-align: right;
+    }
+}
+@media (min-width: 550px) and (max-width: 768px) {
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+    .property-images {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+     .testimonial-grid-page {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+    }
+}

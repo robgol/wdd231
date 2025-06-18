@@ -1,0 +1,775 @@
+/* styles/small.css - Mobile First Styles */
+
+:root {
+    /* Primary Colors */
+    --primary-dark: #003d80;
+    --primary-medium: #0056b3;
+    --primary-light: #eee;
+
+    /* Text Colors */
+    --text-dark: #333;
+    --text-medium: #666;
+    --text-light: #777;
+    --text-white: #fff;
+    --text-placeholder: #ccc;
+
+    /* Border & Background Colors */
+    --border-light: #ddd;
+    --background-white: #fff;
+    --background-off-white: #f8f8f8;
+    --background-light-grey: #fdfdfd;
+    --background-placeholder: #ccc;
+}
+
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-dark);
+    background-color: var(--background-off-white);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+p.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+    color: var(--text-medium);
+}
+
+.button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 12px 25px;
+    background-color: var(--primary-medium);
+    color: var(--text-white);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #777;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-dark);
+}
+header .container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: flex; /* Makes the logo and text align horizontally */
+    align-items: center; /* Vertically aligns them */
+    text-decoration: none; /* Removes underline from the link */
+    color: var(--text-white); /* Ensures text color is white */
+}
+
+.logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Adds space between logo and text */
+}
+
+.logo span {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+
+
+/* Styling for the logo image */
+.logo img {
+    height: 40px; /* Adjust as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any inline spacing issues */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* --- CRITICAL CHANGE FOR MOBILE MENU --- */
+    display: flex; /* Keep it flex, but control visibility with height/overflow */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-dark);
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    /* Initial state for hidden menu: */
+    height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* Ensure opacity and transform are consistent for transition */
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out; /* Smooth transition for height, opacity, transform */
+    transform: translateY(-10px);
+    /* --- END CRITICAL CHANGE --- */
+    z-index: 999;
+}
+
+nav ul.active {
+    /* --- CRITICAL CHANGE FOR MOBILE MENU --- */
+    height: auto; /* Reveal menu height */
+    padding: 20px 0; /* Restore padding */
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Enable interaction */
+    transform: translateY(0); /* Reset transform */
+    /* --- END CRITICAL CHANGE --- */
+}
+
+nav ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: block; /* Show hamburger on small screens */
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-white);
+    transition: transform 0.3s ease;
+}
+
+.hamburger.active .fa-bars:before {
+    content: "\f00d";
+}
+
+.hamburger.active .fa-bars {
+    transform: rotate(90deg);
+}
+
+
+/* Highlight Property Section */
+.highlight-property {
+    position: relative;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 60px 0;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.highlight-property::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.highlight-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.highlight-background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.highlight-content {
+    position: relative;
+    z-index: 2;
+    color: var(--text-white);
+}
+
+.highlight-property h1 {
+    font-size: 36px;
+    color: var(--text-white);
+}
+
+.highlight-property p {
+    font-size: 18px;
+    color: var(--text-white);
+    margin-bottom: 30px;
+}
+
+/* Main Benefits Section */
+.main-benefits {
+    padding: 60px 0;
+    background-color: var(--background-white);
+}
+
+.main-benefits h2 {
+    font-size: 36px;
+}
+
+.main-benefits .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-benefits .feature-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 90%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    background-color: var(--background-light-grey);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.feature-item .feature-icon {
+    font-size: 40px;
+    color: var(--primary-medium);
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.feature-item p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-light);
+    text-align: left;
+}
+
+/* Hot Deals Section */
+.hot-deals {
+    padding: 60px 0;
+    background-color: var(--primary-light);
+}
+
+.hot-deals h2 {
+    font-size: 36px;
+}
+
+.hot-deals .deal-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hot-deals .deal-item {
+    width: 80%;
+    height: 200px;
+    background-color: var(--background-placeholder);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hot-deals .deal-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 0;
+    background-color: var(--background-white);
+}
+
+.testimonials h2 {
+    font-size: 36px;
+}
+
+.testimonials .testimonial-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.testimonials .testimonial-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 90%;
+    background-color: var(--background-light-grey);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-light);
+    text-align: center;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-medium);
+    margin-bottom: 15px;
+}
+
+.testimonial-item .author {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+/* Get In Touch Section */
+.get-in-touch {
+    padding: 60px 0;
+    background-color: var(--primary-light);
+}
+
+.get-in-touch h2 {
+    font-size: 36px;
+}
+
+.get-in-touch .contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.get-in-touch input[type="email"],
+.get-in-touch input[type="text"] {
+    padding: 12px;
+    border: 1px solid var(--text-placeholder);
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+    width: 80%;
+    min-width: unset;
+}
+
+.get-in-touch .subscribe-button {
+    margin: 0;
+    flex-grow: 0;
+    width: 80%;
+    min-width: 150px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .footer-nav ul {
+    list-style: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-nav ul li {
+    margin: 0 15px;
+}
+
+footer .footer-nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer .footer-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .address,
+footer .copyright {
+    font-size: 14px;
+    color: var(--text-placeholder);
+    margin-top: 10px;
+}
+
+/* Properties Listing Section */
+.properties-listing {
+    padding: 60px 0;
+    background-color: var(--background-off-white);
+}
+
+.properties-listing h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 30px; /* Space between property cards */
+    justify-items: center; /* Center items in the grid */
+}
+
+.property-card {
+    background-color: var(--background-white);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 350px; /* Max width for cards on small screens */
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    display: block;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+.property-card:hover img {
+    transform: scale(1.05); /* Scales the image up by 5% on hover */
+}
+
+.property-card h3 {
+    font-size: 24px;
+    color: var(--primary-medium);
+    margin-bottom: 10px;
+}
+
+.property-card p {
+    font-size: 16px;
+    color: var(--text-medium);
+    margin-bottom: 5px;
+    padding: 0 15px; /* Add some padding for text */
+}
+
+.property-card .button {
+    margin-top: 20px;
+    display: inline-block; /* Make button inline-block for proper centering */
+    width: auto; /* Reset width from general button style */
+}
+.deal-item a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Inherit color from parent */
+    display: block; /* Make the whole area clickable */
+}
+
+.deal-item img {
+    width: 100%;
+    height: 150px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.deal-item .deal-description {
+    padding: 10px;
+    font-size: 14px;
+    color: var(--text-dark);
+    text-align: center;
+    margin-top: 0;
+}
+
+/* Ensure deal-item itself has padding/styling */
+.deal-item {
+    background-color: var(--background-white);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden; /* Important for image border-radius */
+    transition: transform 0.2s ease-in-out;
+}
+
+.deal-item:hover {
+    transform: translateY(-5px); /* Simple hover effect */
+}
+
+.filter-controls {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.filter-controls label {
+    font-size: 18px;
+    margin-right: 10px;
+    color: var(--text-dark);
+}
+
+.filter-controls select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+    background-color: var(--background-white);
+    cursor: pointer;
+}
+
+.filter-controls select:focus {
+    outline: none;
+    border-color: var(--primary-medium);
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2); /* Light blue shadow */
+}
+/* Property Detail Section */
+.property-detail {
+    padding: 60px 0;
+    background-color: var(--background-off-white);
+    text-align: center;
+}
+
+.property-detail h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--primary-medium);
+}
+
+.property-info {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+.property-info strong {
+    color: var(--primary-dark);
+}
+
+.property-images {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 15px;
+    max-width: 800px; /* Limit width of image gallery */
+    margin: 0 auto;
+}
+
+.detail-image {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#no-property-found {
+    padding: 20px;
+    background-color: #ffe0e0;
+    border: 1px solid #ffaaaa;
+    border-radius: 8px;
+    color: #cc0000;
+    margin-top: 30px;
+}
+
+#no-property-found a {
+    color: #cc0000;
+    text-decoration: underline;
+}
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px; /* Add padding for better active styling */
+    border-radius: 5px; /* Optional: rounded corners for active state */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background on hover */
+}
+
+/* Style for the active menu item */
+nav ul li.active a {
+    background-color: var(--primary-medium); /* A slightly different shade or highlight color */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none; /* Remove underline for active state */
+}
+/* Page Testimonials Section */
+.page-testimonials {
+    padding: 60px 0;
+    background-color: var(--background-off-white);
+}
+
+.page-testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.testimonial-grid-page {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for small screens */
+    gap: 30px; /* Space between testimonial cards */
+    justify-items: center; /* Center items in the grid */
+    margin-top: 40px;
+}
+
+.testimonial-item-page {
+    background-color: var(--background-white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-light);
+    text-align: center;
+    max-width: 380px; /* Max width for cards on small screens */
+    width: 100%;
+}
+
+.testimonial-item-page .quote {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-medium);
+    margin-bottom: 15px;
+}
+
+.testimonial-item-page .author {
+    font-weight: bold;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.thank-you-message {
+    padding: 80px 20px;
+    background-color: var(--background-light-grey);
+    text-align: center;
+    min-height: 400px; /* Ensure it takes up some space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-message h2 {
+    color: var(--primary-dark);
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.thank-you-message .section-description {
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#subscribed-email {
+    font-weight: bold;
+    color: var(--primary-medium);
+}
+/* About Us Section */
+.about-us {
+    padding: 60px 0;
+    background-color: var(--background-off-white);
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-text {
+    text-align: left; /* Align text within its container */
+    max-width: 800px;
+    padding: 0 15px;
+}
+
+.about-text h3 {
+    font-size: 28px;
+    color: var(--primary-medium);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-align: center; /* Center heading for small screens */
+}
+
+.about-text p, .about-text ul {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-medium);
+    margin-bottom: 15px;
+}
+
+.about-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+}
+
+.about-text strong {
+    color: var(--primary-dark);
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* For desktop, if needed, ensure active style is visible */
+@media (min-width: 769px) {
+    nav ul li.active a {
+        background-color: var(--primary-medium); /* Or a similar color */
+        /* You might want a different background or border effect for desktop */
+    }
+}

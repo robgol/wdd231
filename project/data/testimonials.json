@@ -1,0 +1,58 @@
+{
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "RealDream made our home buying process incredibly smooth and stress-free. Highly recommend their professional team!",
+      "author": "Alice Johnson",
+      "role": "First-time Homebuyer"
+    },
+    {
+      "id": "t2",
+      "quote": "Finding the perfect apartment was a breeze with RealDream. Their agents understood exactly what I was looking for.",
+      "author": "Bob Williams",
+      "role": "Relocation Client"
+    },
+    {
+      "id": "t3",
+      "quote": "Exceptional service from start to finish. RealDream helped us sell our property quickly and for a great price.",
+      "author": "Carol Davis",
+      "role": "Property Seller"
+    },
+    {
+      "id": "t4",
+      "quote": "Professional, efficient, and truly dedicated. RealDream exceeded all our expectations in finding our dream home.",
+      "author": "David Miller",
+      "role": "Family Home Buyer"
+    },
+    {
+      "id": "t5",
+      "quote": "I was impressed by their local market knowledge. They guided me through every step of purchasing my condo.",
+      "author": "Eve Taylor",
+      "role": "Condo Investor"
+    },
+    {
+      "id": "t6",
+      "quote": "RealDream provided outstanding support. They found us a townhouse that perfectly fit our growing family's needs.",
+      "author": "Frank White",
+      "role": "Growing Family"
+    },
+    {
+      "id": "t7",
+      "quote": "Their team is responsive and very knowledgeable. It was a pleasure working with RealDream on our new property.",
+      "author": "Grace Lee",
+      "role": "Real Estate Investor"
+    },
+    {
+      "id": "t8",
+      "quote": "From the initial consultation to closing, RealDream was there for us. They made our first home purchase a joy.",
+      "author": "Henry Green",
+      "role": "New Homeowner"
+    },
+    {
+      "id": "t9",
+      "quote": "Absolutely top-tier service! RealDream's dedication to client satisfaction is truly remarkable.",
+      "author": "Ivy King",
+      "role": "Satisfied Client"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+.forecast-day {
+    display: block;
+    margin: 20px;
+}
+
+.forecast-day p {
+    margin: 5px 0;
+}
+
+.weather-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.weather-icon {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.weather-details {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.weather-details p {
+    margin: 0;
+}
+
